@@ -43,3 +43,50 @@ enjoy4 = "outdoors"
 print("Things I enjoy back home:")
 print("-", enjoy1)
 print("-", enjoy2)
+print("-", enjoy3)
+print("-", enjoy4)
+
+# Simple math practice with several small examples.
+apples = 2
+oranges = 3
+bananas = 4
+pears = 1
+fruit_total = apples + oranges + bananas + pears
+fruit_diff = bananas - apples
+double_apples = apples * 2
+half_oranges = oranges / 2
+mod_example = bananas % apples
+floor_div = bananas // apples
+
+print("Fruit total:", fruit_total)
+print("Fruit difference (bananas - apples):", fruit_diff)
+print("Double apples:", double_apples)
+print("Half oranges:", half_oranges)
+print("Bananas mod apples:", mod_example)
+print("Bananas floor-div apples:", floor_div)
+
+# String practice inserting variables (still simple).
+greeting = f"Hi, I'm {full_name} from {city}, {state}."
+intro = f"I like {hobby} in the {area}."
+pet_line = f"I prefer {pet_pref}."
+home_line = f"Home base: {home}."
+city_state_line = f"City: {city}, State: {state_long}."
+caps_greeting = greeting.upper()
+lower_intro = intro.lower()
+combined = greeting + " " + intro + " " + pet_line
+
+print(greeting)
+print(intro)
+print(pet_line)
+print(home_line)
+print(city_state_line)
+print("Greeting length:", len(greeting))
+print("Caps greeting:", caps_greeting)
+print("Lower intro:", lower_intro)
+print("Combined line:", combined)
+
+# Simple summary string without functions yet.
+summary = "Day " + str(days_coding) + ": practiced " + topic1
+print(summary)
+
+# Progress: part 2/2
