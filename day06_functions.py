@@ -168,3 +168,27 @@ print("First from my empty list:", list_first([]))
 
 print("My city and state:", describe_city("Asheville", "NC"))
 print("My location:", my_location("Asheville"))
+print("My repeated phrase:", repeat_phrase("practice", 3))
+
+print("Is 4 even?", is_even(4))
+print("Is 7 even?", is_even(7))
+print("Is 9 odd?", is_odd(9))
+
+print("My total mountains:", count_items(mountains))
+print("My sum of numbers:", sum_numbers([1, 2, 3, 4]))
+print("My average:", average_numbers([2, 4, 6, 8]))
+
+print(format_pet("Scout", "dog"))
+print("My full name:", full_name("David", "Phyfe"))
+
+print("50F in C:", to_celsius(50))
+print("10C in F:", to_fahrenheit(10))
+
+print("My squared number:", square(5))
+print("Is 'Asheville' a long word?", is_long_word("Asheville"))
+print("Is 'dog' a long word?", is_long_word("dog"))
+
+print(hiking_greeting("David", "Blue Ridge"))
+print("My doubled value:", double(15))
+
+# Progress: part 2/2
