@@ -66,3 +66,81 @@ with open(mountain_path, "w", encoding="utf-8") as file:
 print("I wrote my mountains to", mountain_path)
 
 # Read my mountains back
+with open(mountain_path, "r", encoding="utf-8") as file:
+    mountains_content = file.read()
+print(mountains_content)
+
+# Check existence using try/except for my practice (8)
+try:
+    with open("missing.txt", "r", encoding="utf-8") as file:
+        missing_content = file.read()
+    print(missing_content)
+except FileNotFoundError:
+    print("I tried to read missing.txt but it's not here, which is expected.")
+
+# Try another missing file
+try:
+    with open("not_here.txt", "r", encoding="utf-8") as file:
+        data = file.read()
+except FileNotFoundError:
+    print("I also tried not_here.txt and it's missing too.")
+
+# Append and read my list file again to see change (9)
+with open(list_path, "a", encoding="utf-8") as file:
+    file.write("cook dinner\n")
+with open(list_path, "r", encoding="utf-8") as file:
+    print("My updated list file:\n" + file.read())
+
+# Write numbers to a file for my practice
+numbers_path = "day08_numbers.txt"
+with open(numbers_path, "w", encoding="utf-8") as file:
+    for i in range(1, 6):
+        file.write("Number " + str(i) + "\n")
+print("I wrote numbers to", numbers_path)
+
+# Read my numbers file line by line
+print("My numbers file:")
+with open(numbers_path, "r", encoding="utf-8") as file:
+    for line in file:
+        print(line.strip())
+
+# Create a file with my dog names
+dog_path = "day08_dogs.txt"
+with open(dog_path, "w", encoding="utf-8") as file:
+    file.write("Scout\n")
+    file.write("Luna\n")
+
+print("I created my dogs file")
+
+# Read my dogs file
+with open(dog_path, "r", encoding="utf-8") as file:
+    dog_lines = file.readlines()
+print("My dogs:", [name.strip() for name in dog_lines])
+
+# Overwrite my dogs file with more info
+with open(dog_path, "w", encoding="utf-8") as file:
+    file.write("My dogs:\n")
+    file.write("1. Scout - playful\n")
+    file.write("2. Luna - calm\n")
+
+# Read my updated dogs file
+with open(dog_path, "r", encoding="utf-8") as file:
+    print("\nMy updated dogs file:\n" + file.read())
+
+# Write a simple log entry
+log_path = "day08_log.txt"
+with open(log_path, "w", encoding="utf-8") as file:
+    file.write("2025-01-08: Started learning file I/O\n")
+
+# Append more log entries
+with open(log_path, "a", encoding="utf-8") as file:
+    file.write("2025-01-08: Practiced reading and writing\n")
+    file.write("2025-01-08: Tried append mode\n")
+
+print("I created my log file")
+
+# Read my complete log
+with open(log_path, "r", encoding="utf-8") as file:
+    print("\nMy log:\n" + file.read())
+
+# Progress: part 2/2
