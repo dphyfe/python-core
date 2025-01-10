@@ -86,3 +86,98 @@ except TypeError:
     print("I got a type error mixing string and int.")
 
 # Using else with my try/except (7)
+try:
+    my_division = 10 / 2
+except ZeroDivisionError:
+    print("I shouldn't see this.")
+else:
+    print("My division worked:", my_division)
+
+# Another else example for my learning
+try:
+    my_calc2 = 20 / 4
+except ZeroDivisionError:
+    print("Error occurred")
+else:
+    print("My calc2 succeeded:", my_calc2)
+
+# Using a finally block for my cleanup (8)
+try:
+    print("I'm dividing numbers...")
+    my_result2 = 10 / 2
+    print("My result:", my_result2)
+finally:
+    print("I finished my division attempt.")
+
+# Another finally for my practice
+try:
+    my_test = 15 / 3
+    print("My test result:", my_test)
+finally:
+    print("I always run this finally block.")
+
+# My multiple exception types
+try:
+    my_numbers[10]
+except IndexError:
+    print("I caught an index error.")
+except ValueError:
+    print("I caught a value error.")
+
+# Catching multiple errors in one block
+try:
+    my_val = int("bad")
+except (ValueError, TypeError):
+    print("I caught either ValueError or TypeError.")
+
+# Clean up with my try/finally (9)
+my_file = None
+try:
+    my_file = open("day10_temp.txt", "w", encoding="utf-8")
+    my_file.write("My temporary note for error handling demo.")
+    print("I wrote my temp file.")
+finally:
+    if my_file:
+        my_file.close()
+        print("I closed my temp file.")
+
+# Another file cleanup example
+my_log = None
+try:
+    my_log = open("day10_log.txt", "w", encoding="utf-8")
+    my_log.write("My log entry\n")
+    print("I wrote to my log.")
+finally:
+    if my_log:
+        my_log.close()
+        print("I closed my log file.")
+
+# My nested try/except practice
+try:
+    try:
+        my_inner = 10 / 0
+    except ZeroDivisionError:
+        print("I caught the error in my inner try.")
+        raise
+except ZeroDivisionError:
+    print("I caught it again in my outer try.")
+
+# Catching generic exception for my learning
+try:
+    result = 1 / 0
+except Exception as e:
+    print("I caught a generic exception:", type(e).__name__)
+
+# My assertion error practice
+try:
+    assert 1 == 2, "My assertion failed"
+except AssertionError as e:
+    print("I got an assertion error:", e)
+
+# Practicing with name error
+try:
+    print(undefined_variable)
+except NameError:
+    print("I tried to use a variable that doesn't exist.")
+
+# Progress: part 2/2
