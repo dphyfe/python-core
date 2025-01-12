@@ -48,3 +48,53 @@ print(my_formatted_big)
 
 my_money = 12345.67
 my_formatted_money = f"Amount: ${my_money:,.2f}"
+print(my_formatted_money)
+
+# My multiline strings (6)
+my_paragraph = f"""
+My name is {my_name}.
+I live in {my_city}.
+I am {my_age} years old.
+"""
+print(my_paragraph)
+
+# My string with conditionals (7)
+my_status = "adult" if my_age >= 18 else "minor"
+my_status_text = f"I am an {my_status}"
+print(my_status_text)
+
+my_temp_status = "warm" if my_temp > 60 else "cool"
+my_weather = f"It is {my_temp_status} today at {my_temp:.1f}Â°F"
+print(my_weather)
+
+# My dictionary formatting (8)
+my_person = {"name": "David", "city": "Asheville", "state": "NC"}
+my_dict_text = f"Info: {my_person['name']} from {my_person['city']}"
+print(my_dict_text)
+
+# My list in f-string (9)
+my_mountains = ["Blue Ridge", "Smoky", "Pisgah"]
+my_mountain_text = f"First mountain: {my_mountains[0]}"
+print(my_mountain_text)
+
+my_list_info = f"I have {len(my_mountains)} mountains in my list"
+print(my_list_info)
+
+# My join in f-string (10)
+my_foods = ["tacos", "pizza", "noodles"]
+my_foods_text = f"My favorite foods: {', '.join(my_foods)}"
+print(my_foods_text)
+
+# My complex expressions (11)
+my_scores = [85, 90, 78, 92]
+my_average = f"My average score: {sum(my_scores) / len(my_scores):.1f}"
+print(my_average)
+
+my_max_score = f"My best score: {max(my_scores)}"
+print(my_max_score)
+
+# My padding and alignment (12)
+print(f"{'Name':<15} {'Age':>5} {'City':<15}")
+print(f"{my_name:<15} {my_age:>5} {my_city:<15}")
+
+# Progress: part 2/2
