@@ -69,5 +69,38 @@ print("My set after discard:", my_numbers_set)
 my_set1 = {1, 2, 3}
 my_set2 = {3, 4, 5}
 my_union = my_set1 | my_set2
+print("My union:", my_union)
 
-# Progress: part 2/3
+# Another union
+my_dogs = {"Scout", "Luna"}
+my_neighbors_dogs = {"Max", "Luna"}
+my_all_dogs = my_dogs | my_neighbors_dogs
+print("My all dogs:", my_all_dogs)
+
+# My set intersection (11)
+my_intersection = my_set1 & my_set2
+print("My intersection:", my_intersection)
+
+# Common activities
+my_hobbies = {"hiking", "reading", "coding"}
+my_friends_hobbies = {"hiking", "gaming", "coding"}
+my_common = my_hobbies & my_friends_hobbies
+print("My common hobbies:", my_common)
+
+# My set difference (12)
+my_difference = my_set1 - my_set2
+print("My difference (set1 - set2):", my_difference)
+
+# What I like that friend doesn't
+my_only_mine = my_hobbies - my_friends_hobbies
+print("My unique hobbies:", my_only_mine)
+
+# My set membership tests (13)
+my_mountains_set = {"Blue Ridge", "Smoky", "Pisgah"}
+print("Is Smoky in my set?", "Smoky" in my_mountains_set)
+print("Is Grandfather in my set?", "Grandfather" in my_mountains_set)
+
+# My set length
+print("My set has", len(my_mountains_set), "items")
+
+# Progress: part 3/3
