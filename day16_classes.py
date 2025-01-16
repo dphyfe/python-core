@@ -86,5 +86,47 @@ class MyCounter:
         return f"Total counters: {MyCounter.my_count}"
 
 my_c1 = MyCounter("first")
+my_c2 = MyCounter("second")
+my_c3 = MyCounter("third")
+print(my_c1.my_total())
 
-# Progress: part 2/4
+# My property decorator (6)
+class MyTemperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
+    
+    @property
+    def my_fahrenheit(self):
+        return (self._celsius * 9/5) + 32
+
+my_temp = MyTemperature(0)
+print(f"0 Celsius = {my_temp.my_fahrenheit} Fahrenheit")
+
+my_temp2 = MyTemperature(100)
+print(f"100 Celsius = {my_temp2.my_fahrenheit} Fahrenheit")
+
+# My class with __str__ (7)
+class MyCity:
+    def __init__(self, name, state):
+        self.name = name
+        self.state = state
+    
+    def __str__(self):
+        return f"{self.name}, {self.state}"
+
+my_asheville = MyCity("Asheville", "NC")
+print("My city:", my_asheville)
+
+# My class with __repr__ (8)
+class MyPoint:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def __repr__(self):
+        return f"Point({self.x}, {self.y})"
+
+my_point = MyPoint(3, 4)
+print("My point repr:", repr(my_point))
+
+# Progress: part 3/4
