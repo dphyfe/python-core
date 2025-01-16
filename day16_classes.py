@@ -128,5 +128,44 @@ class MyPoint:
 
 my_point = MyPoint(3, 4)
 print("My point repr:", repr(my_point))
+print("My point:", my_point)
 
-# Progress: part 3/4
+# My class with __len__ (9)
+class MyPlaylist:
+    def __init__(self):
+        self.songs = []
+    
+    def my_add_song(self, song):
+        self.songs.append(song)
+    
+    def __len__(self):
+        return len(self.songs)
+
+my_playlist = MyPlaylist()
+my_playlist.my_add_song("Song 1")
+my_playlist.my_add_song("Song 2")
+my_playlist.my_add_song("Song 3")
+print(f"My playlist has {len(my_playlist)} songs")
+
+# My inheritance (10)
+class MyAnimal:
+    def __init__(self, name):
+        self.name = name
+    
+    def my_speak(self):
+        return "Some sound"
+
+class MyDog2(MyAnimal):
+    def my_speak(self):
+        return f"{self.name} says woof!"
+
+class MyCat(MyAnimal):
+    def my_speak(self):
+        return f"{self.name} says meow!"
+
+my_dog2 = MyDog2("Buddy")
+my_cat = MyCat("Whiskers")
+print(my_dog2.my_speak())
+print(my_cat.my_speak())
+
+# Progress: part 4/4
