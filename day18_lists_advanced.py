@@ -86,5 +86,39 @@ print("After reverse():", my_reverse)
 
 # My list count and index (12)
 my_data = [1, 2, 3, 2, 4, 2, 5]
+print("Count of 2:", my_data.count(2))
+print("Index of 3:", my_data.index(3))
 
-# Progress: part 2/3
+# My list cleaning and filtering (13)
+my_with_nones = [1, None, 2, None, 3]
+my_clean = [x for x in my_with_nones if x is not None]
+print("Cleaned:", my_clean)
+
+my_with_zeros = [0, 1, 0, 2, 0, 3]
+my_no_zeros = [x for x in my_with_zeros if x != 0]
+print("No zeros:", my_no_zeros)
+
+# My list flattening (14)
+my_nested = [[1, 2], [3, 4], [5, 6]]
+my_flat = [item for sublist in my_nested for item in sublist]
+print("Flattened:", my_flat)
+
+# My list as stack (LIFO) (15)
+my_stack = []
+my_stack.append(1)
+my_stack.append(2)
+my_stack.append(3)
+print("Stack:", my_stack)
+my_popped_item = my_stack.pop()
+print("Popped:", my_popped_item)
+print("After pop:", my_stack)
+
+# My list methods summary (16)
+my_test_list = [3, 1, 4, 1, 5, 9, 2, 6]
+print("Length:", len(my_test_list))
+print("Min:", min(my_test_list))
+print("Max:", max(my_test_list))
+print("Sum:", sum(my_test_list))
+print("Count 1s:", my_test_list.count(1))
+
+# Progress: part 3/3
