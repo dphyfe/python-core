@@ -42,3 +42,49 @@ my_scores.sort(reverse=True)
 print("Sorted descending:", my_scores)
 
 # My list with strings (6)
+my_words = ["python", "apple", "zebra", "monkey"]
+my_sorted_words = sorted(my_words)
+print("Sorted words:", my_sorted_words)
+
+my_sorted_by_length = sorted(my_words, key=len)
+print("Sorted by length:", my_sorted_by_length)
+
+# My nested lists (7)
+my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print("My matrix:", my_matrix)
+print("First row:", my_matrix[0])
+print("Item [1][2]:", my_matrix[1][2])
+
+# My list iteration (8)
+my_fruits = ["apple", "banana", "cherry"]
+for fruit in my_fruits:
+    print(f"- {fruit}")
+
+for i, fruit in enumerate(my_fruits):
+    print(f"{i}: {fruit}")
+
+# My list with zip (9)
+my_names = ["David", "Taylor", "Alex"]
+my_ages = [30, 28, 25]
+for name, age in zip(my_names, my_ages):
+    print(f"{name} is {age}")
+
+# My list copy (10)
+my_original = [1, 2, 3]
+my_shallow_copy = my_original.copy()
+my_shallow_copy[0] = 99
+print("Original:", my_original)
+print("Copy:", my_shallow_copy)
+
+# My list reversal (11)
+my_reverse = [1, 2, 3, 4, 5]
+my_reversed = list(reversed(my_reverse))
+print("Reversed:", my_reversed)
+
+my_reverse.reverse()
+print("After reverse():", my_reverse)
+
+# My list count and index (12)
+my_data = [1, 2, 3, 2, 4, 2, 5]
+
+# Progress: part 2/3
