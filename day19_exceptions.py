@@ -105,5 +105,45 @@ except IndexError as my_error:
 
 # My assertion (12)
 my_age = 30
+assert my_age >= 0, "Age must be non-negative"
+print("My age is valid")
 
-# Progress: part 2/3
+try:
+    my_bad_age = -5
+    assert my_bad_age >= 0, "Age must be non-negative"
+except AssertionError as e:
+    print(f"My assertion error: {e}")
+
+# My exception chain with from (13)
+try:
+    try:
+        my_data = {"name": "David"}
+        my_email = my_data["email"]
+    except KeyError as e:
+        raise ValueError("Missing email") from e
+except ValueError as e:
+    print(f"My error: {e}")
+
+# My with statement (context manager) (14)
+my_content = "Hello World"
+with open("my_context_test.txt", "w") as my_f:
+    my_f.write(my_content)
+
+# Reading back
+with open("my_context_test.txt", "r") as my_f:
+    my_text = my_f.read()
+    print(f"My read: {my_text}")
+
+# Clean up
+import os
+if os.path.exists("my_context_test.txt"):
+    os.remove("my_context_test.txt")
+
+# My logging instead of print (15)
+import logging
+logging.basicConfig(level=logging.WARNING)
+my_logger = logging.getLogger(__name__)
+my_logger.warning("My warning message")
+my_logger.error("My error message")
+
+# Progress: part 3/3
