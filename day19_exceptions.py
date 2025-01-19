@@ -43,3 +43,67 @@ try:
     my_item = my_nums[5]
 except IndexError:
     print("My error: index out of range")
+finally:
+    print("My cleanup: always runs")
+
+# My finally for resource cleanup (6)
+try:
+    my_f = open("my_temp_test.txt", "w")
+    my_f.write("test content")
+except IOError:
+    print("My error: file operation failed")
+finally:
+    if 'my_f' in locals():
+        my_f.close()
+    print("My cleanup: file closed")
+
+# My raising exceptions (7)
+def my_validate_age(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    return True
+
+try:
+    my_validate_age(-5)
+except ValueError as e:
+    print(f"My error: {e}")
+
+# My custom exception (8)
+class MyCustomError(Exception):
+    pass
+
+def my_check_score(score):
+    if score > 100:
+        raise MyCustomError("Score cannot exceed 100")
+    return True
+
+try:
+    my_check_score(150)
+except MyCustomError as e:
+    print(f"My custom error: {e}")
+
+# My catching base exceptions (9)
+try:
+    my_risky = None
+    my_result = my_risky.upper()
+except AttributeError as e:
+    print(f"My error: {e}")
+
+# My bare except (catch all) (10)
+try:
+    my_x = 10 / 0
+except:
+    print("My error: something went wrong")
+
+# My exception as variable (11)
+try:
+    my_list = [1, 2, 3]
+    my_value = my_list[99]
+except IndexError as my_error:
+    print(f"My error details: {my_error}")
+    print(f"My error type: {type(my_error)}")
+
+# My assertion (12)
+my_age = 30
+
+# Progress: part 2/3
