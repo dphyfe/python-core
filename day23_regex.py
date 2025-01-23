@@ -49,3 +49,51 @@ if my_match:
     print(f"My domain: {my_match.group(2)}")
 
 # My optional patterns (8)
+my_pattern = r"colou?r"
+print(f"My 'color' matches: {bool(re.search(my_pattern, 'color'))}")
+print(f"My 'colour' matches: {bool(re.search(my_pattern, 'colour'))}")
+
+# My repetition patterns (9)
+my_pattern = r"a{3}"
+my_text1 = "aaa"
+my_text2 = "aa"
+print(f"My 'aaa' matches: {bool(re.search(my_pattern, my_text1))}")
+print(f"My 'aa' matches: {bool(re.search(my_pattern, my_text2))}")
+
+# My alternation (10)
+my_pattern = r"dog|cat|bird"
+my_animals = ["dog", "cat", "fish", "bird"]
+for animal in my_animals:
+    print(f"My '{animal}' matches: {bool(re.search(my_pattern, animal))}")
+
+# My string replacement (11)
+my_pattern = r"\d+"
+my_text = "I have 2 dogs and 1 cat"
+my_result = re.sub(my_pattern, "X", my_text)
+print(f"My replaced: {my_result}")
+
+# My substitution with groups (12)
+my_pattern = r"(\d+)/(\d+)/(\d+)"
+my_date = "01/15/2025"
+my_result = re.sub(my_pattern, r"\3-\1-\2", my_date)
+print(f"My reformatted date: {my_result}")
+
+# My splitting with regex (13)
+my_pattern = r"[,;]"
+my_text = "apple,banana;cherry,date"
+my_result = re.split(my_pattern, my_text)
+print(f"My split: {my_result}")
+
+# My case-insensitive matching (14)
+my_pattern = r"HELLO"
+my_text = "hello world"
+my_match = re.search(my_pattern, my_text, re.IGNORECASE)
+print(f"My case-insensitive match: {bool(my_match)}")
+
+# My multiline matching (15)
+my_pattern = r"^line"
+my_text = "start\nline 2\nline 3"
+my_matches = re.findall(my_pattern, my_text, re.MULTILINE)
+print(f"My multiline matches: {len(my_matches)}")
+
+# Progress: part 2/2
