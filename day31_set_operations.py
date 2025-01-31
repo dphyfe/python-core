@@ -40,3 +40,41 @@ print(f"My after intersection_update: {my_s1}")
 # My subset check (9)
 my_small = {1, 2}
 my_large = {1, 2, 3, 4}
+print(f"My is subset: {my_small.issubset(my_large)}")
+print(f"My is superset: {my_large.issuperset(my_small)}")
+
+# My disjoint check (10)
+my_a = {1, 2, 3}
+my_b = {4, 5, 6}
+print(f"My disjoint: {my_a.isdisjoint(my_b)}")
+
+# My add and remove (11)
+my_s = {1, 2, 3}
+my_s.add(4)
+my_s.remove(2)
+print(f"My modified: {my_s}")
+
+# My discard (12)
+my_set = {1, 2, 3}
+my_set.discard(2)
+my_set.discard(10)
+print(f"My after discard: {my_set}")
+
+# My pop (13)
+my_s = {1, 2, 3}
+my_item = my_s.pop()
+print(f"My popped: {my_item}")
+
+# My clear (14)
+my_set = {1, 2, 3}
+my_set.clear()
+print(f"My cleared: {my_set}")
+
+# My copy (15)
+my_original = {1, 2, 3}
+my_copy = my_original.copy()
+my_copy.add(4)
+print(f"My original: {my_original}")
+print(f"My copy: {my_copy}")
+
+# Progress: part 2/2
