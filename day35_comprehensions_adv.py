@@ -18,3 +18,21 @@ print(f"My matrix: {my_matrix}")
 
 # My flattening (5)
 my_nested = [[1, 2], [3, 4], [5, 6]]
+my_flat = [item for sublist in my_nested for item in sublist]
+print(f"My flat: {my_flat}")
+
+# My dict comprehension (6)
+my_dict = {x: x**2 for x in range(5)}
+print(f"My dict squares: {my_dict}")
+
+# My dict from lists (7)
+my_keys = ["a", "b", "c"]
+my_values = [1, 2, 3]
+my_dict = {k: v for k, v in zip(my_keys, my_values)}
+print(f"My zipped dict: {my_dict}")
+
+# My filtering dict (8)
+my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
+my_filtered = {k: v for k, v in my_dict.items() if v > 2}
+
+# Progress: part 2/4
