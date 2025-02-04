@@ -52,5 +52,21 @@ my_vowels = [c for c in my_text if c in "aeiou"]
 print(f"My vowels: {my_vowels}")
 
 # My list to dict comprehension (12)
+my_pairs = [(1, "a"), (2, "b"), (3, "c")]
+my_d = {k: v for k, v in my_pairs}
+print(f"My from pairs: {my_d}")
 
-# Progress: part 3/4
+# My set comprehension (13)
+my_set = {x % 3 for x in range(10)}
+print(f"My set: {my_set}")
+
+# My comprehension performance (14)
+my_big = [x for x in range(1000) if x % 2 == 0]
+print(f"My big list length: {len(my_big)}")
+
+# My nested filtering (15)
+my_matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+my_gt_5 = [item for row in my_matrix for item in row if item > 5]
+print(f"My greater than 5: {my_gt_5}")
+
+# Progress: part 4/4
