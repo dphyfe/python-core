@@ -34,5 +34,23 @@ print(f"My zipped dict: {my_dict}")
 # My filtering dict (8)
 my_dict = {"a": 1, "b": 2, "c": 3, "d": 4}
 my_filtered = {k: v for k, v in my_dict.items() if v > 2}
+print(f"My filtered dict: {my_filtered}")
 
-# Progress: part 2/4
+# My transforming dict (9)
+my_data = {"name": "david", "city": "asheville"}
+my_upper = {k: v.upper() for k, v in my_data.items()}
+print(f"My upper dict: {my_upper}")
+
+# My inverting dict (10)
+my_dict = {"a": 1, "b": 2, "c": 3}
+my_inverted = {v: k for k, v in my_dict.items()}
+print(f"My inverted: {my_inverted}")
+
+# My comprehension with condition (11)
+my_text = "hello"
+my_vowels = [c for c in my_text if c in "aeiou"]
+print(f"My vowels: {my_vowels}")
+
+# My list to dict comprehension (12)
+
+# Progress: part 3/4
