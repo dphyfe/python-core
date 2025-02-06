@@ -41,5 +41,27 @@ def my_flexible(value: Union[int, str]) -> str:
     return str(value)
 
 print(f"My flexible int: {my_flexible(42)}")
+print(f"My flexible str: {my_flexible('hello')}")
 
-# Progress: part 2/3
+from typing import Callable
+
+def my_apply(func: Callable[[int], int], value: int) -> int:
+    return func(value)
+
+print(f"My apply: {my_apply(lambda x: x * 2, 5)}")
+
+def my_with_default(name: str = "Guest") -> str:
+    return f"Hello, {name}!"
+
+print(f"My greeting: {my_with_default()}")
+print(f"My greeting named: {my_with_default('David')}")
+
+from typing import Any
+
+def my_any(value: Any) -> str:
+    return str(value)
+
+print(f"My any int: {my_any(42)}")
+print(f"My any str: {my_any('hello')}")
+
+# Progress: part 3/3
