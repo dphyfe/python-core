@@ -19,3 +19,24 @@ my_nums = [1, 2, 3, 4, 5]
 print(f"My sum: {sum(my_nums)}")
 
 # My sum with start (4)
+my_sum_100 = sum(my_nums, 100)
+print(f"My sum with start: {my_sum_100}")
+
+# My min function (5)
+print(f"My min: {min(my_nums)}")
+
+my_words = ["zebra", "apple", "monkey"]
+print(f"My min word: {min(my_words)}")
+
+# My max function (6)
+print(f"My max: {max(my_nums)}")
+print(f"My max word: {max(my_words)}")
+
+# My min with key (7)
+my_by_len = min(my_words, key=len)
+print(f"My min by length: {my_by_len}")
+
+# My max with key (8)
+my_people = [{"name": "David", "age": 30}, {"name": "Taylor", "age": 28}]
+
+# Progress: part 2/4
