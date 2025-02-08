@@ -56,5 +56,20 @@ print(f"My all empty: {all([])}")
 
 # My sum floats (12)
 my_floats = [1.5, 2.5, 3.0]
+print(f"My float sum: {sum(my_floats)}")
 
-# Progress: part 3/4
+# My min/max strings (13)
+my_chars = ["a", "z", "m"]
+print(f"My min char: {min(my_chars)}")
+print(f"My max char: {max(my_chars)}")
+
+# My multiple args (14)
+print(f"My min args: {min(5, 2, 8, 1)}")
+print(f"My max args: {max(5, 2, 8, 1)}")
+
+# My any all with strings (15)
+my_strings = ["hello", "world", ""]
+my_all_non_empty = all(my_strings)
+print(f"My all non-empty: {my_all_non_empty}")
+
+# Progress: part 4/4
