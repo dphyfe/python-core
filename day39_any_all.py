@@ -38,5 +38,23 @@ print(f"My min by length: {my_by_len}")
 
 # My max with key (8)
 my_people = [{"name": "David", "age": 30}, {"name": "Taylor", "age": 28}]
+my_oldest = max(my_people, key=lambda p: p["age"])
+print(f"My oldest: {my_oldest}")
 
-# Progress: part 2/4
+# My any with condition (9)
+my_values = [1, 2, 3, 4, 5]
+my_has_even = any(x % 2 == 0 for x in my_values)
+print(f"My has even: {my_has_even}")
+
+# My all with condition (10)
+my_all_positive = all(x > 0 for x in my_values)
+print(f"My all positive: {my_all_positive}")
+
+# My empty lists (11)
+print(f"My any empty: {any([])}")
+print(f"My all empty: {all([])}")
+
+# My sum floats (12)
+my_floats = [1.5, 2.5, 3.0]
+
+# Progress: part 3/4
