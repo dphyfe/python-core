@@ -73,5 +73,42 @@ def my_check_debug():
 my_check_debug()
 
 # My multiple globals (8)
+my_x = 1
+my_y = 2
 
-# Progress: part 2/3
+def my_sum_globals():
+    global my_x, my_y
+    return my_x + my_y
+
+print(f"My sum: {my_sum_globals()}")
+
+# My local shadowing (9)
+my_name = "David"
+
+def my_greet():
+    my_name = "Taylor"
+    print(f"My greeting: Hello {my_name}")
+
+my_greet()
+print(f"My name: {my_name}")
+
+# My nonlocal chain (10)
+def my_outer2():
+    my_count = 0
+    
+    def my_middle():
+        nonlocal my_count
+        my_count = 5
+        
+        def my_inner2():
+            nonlocal my_count
+            my_count += 1
+        
+        my_inner2()
+    
+    my_middle()
+    print(f"My count: {my_count}")
+
+my_outer2()
+
+# Progress: part 3/3
