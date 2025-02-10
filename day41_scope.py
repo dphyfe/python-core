@@ -34,3 +34,44 @@ def my_outer():
 my_outer()
 
 # My scope hierarchy (4)
+my_a = "global"
+
+def my_test():
+    my_a = "local"
+    print(f"My local a: {my_a}")
+
+my_test()
+print(f"My global a: {my_a}")
+
+# My global modification (5)
+my_list = [1, 2, 3]
+
+def my_append():
+    my_list.append(4)
+
+my_append()
+print(f"My list: {my_list}")
+
+# My nested scope (6)
+def my_level1():
+    my_var = "level1"
+    
+    def my_level2():
+        print(f"My from level2: {my_var}")
+    
+    my_level2()
+
+my_level1()
+
+# My global access (7)
+my_config = {"debug": True}
+
+def my_check_debug():
+    if my_config["debug"]:
+        print("My debug mode on")
+
+my_check_debug()
+
+# My multiple globals (8)
+
+# Progress: part 2/3
