@@ -27,5 +27,7 @@ def my_counter():
     return my_increment
 
 my_c1 = my_counter()
+print(f"My count: {my_c1()}")
+print(f"My count: {my_c1()}")
 
-# Progress: part 2/3
+# Progress: part 3/3
