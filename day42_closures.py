@@ -14,3 +14,18 @@ def my_multiplier(factor):
     return my_multiply
 
 my_double = my_multiplier(2)
+my_triple = my_multiplier(3)
+print(f"My doubled: {my_double(10)}")
+print(f"My tripled: {my_triple(10)}")
+
+def my_counter():
+    my_count = 0
+    def my_increment():
+        nonlocal my_count
+        my_count += 1
+        return my_count
+    return my_increment
+
+my_c1 = my_counter()
+
+# Progress: part 2/3
