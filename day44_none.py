@@ -20,5 +20,9 @@ my_result = my_maybe_return(False)
 print(f"My result: {my_result}")
 
 my_dict = {"a": 1, "b": None, "c": 3}
+my_non_none = {k: v for k, v in my_dict.items() if v is not None}
+print(f"My filtered dict: {my_non_none}")
 
-# Progress: part 2/4
+my_value = None
+
+# Progress: part 3/4
