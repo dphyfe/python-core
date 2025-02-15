@@ -24,5 +24,15 @@ my_non_none = {k: v for k, v in my_dict.items() if v is not None}
 print(f"My filtered dict: {my_non_none}")
 
 my_value = None
+my_safe = my_value or "default"
+print(f"My safe value: {my_safe}")
 
-# Progress: part 3/4
+def my_process(value=None):
+    if value is None:
+        value = []
+    return value
+
+print(f"My default: {my_process()}")
+print(f"My with value: {my_process([1, 2])}")
+
+# Progress: part 4/4
