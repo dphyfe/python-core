@@ -16,3 +16,27 @@ print(f"My complex: {my_result}")
 
 my_truthy = [1, "hello", [1], {"a": 1}]
 my_falsy = [0, "", [], {}, None, False]
+print(f"My truthy 1: {bool(1)}")
+print(f"My falsy 0: {bool(0)}")
+print(f"My falsy empty: {bool('')}")
+
+my_name = "David"
+if my_name:
+    print("My name exists")
+
+my_empty = []
+if not my_empty:
+    print("My list is empty")
+
+my_x = 5
+my_in_range = 0 < my_x < 10
+print(f"My in range: {my_in_range}")
+
+my_items = [1, 2, 3]
+my_has_2 = 2 in my_items
+print(f"My has 2: {my_has_2}")
+
+my_short_circuit = my_false and print("Won't print")
+print("My short circuit worked")
+
+# Progress: part 2/2
