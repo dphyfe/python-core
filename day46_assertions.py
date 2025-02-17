@@ -26,3 +26,22 @@ print("My key assertion passed")
 
 my_value = 42
 assert isinstance(my_value, int)
+print("My type assertion passed")
+
+my_list = [1, 2, 3, 4, 5]
+assert all(x > 0 for x in my_list)
+print("My all positive passed")
+
+my_config = {"debug": True}
+assert my_config.get("debug") == True
+print("My config assertion passed")
+
+my_name = "David"
+assert my_name.startswith("D")
+print("My string assertion passed")
+
+my_data = [1, 2, 3]
+assert my_data == [1, 2, 3]
+print("My equality assertion passed")
+
+# Progress: part 2/2
