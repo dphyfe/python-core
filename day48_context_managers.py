@@ -31,3 +31,32 @@ with my_context() as my_val:
     print(f"My value: {my_val}")
 
 import time
+class MyTimer:
+    def __enter__(self):
+        self.start = time.time()
+        return self
+    
+    def __exit__(self, *args):
+        self.end = time.time()
+        print(f"My elapsed: {self.end - self.start:.4f}s")
+
+with MyTimer():
+    sum(range(1000000))
+
+from contextlib import suppress
+with suppress(ValueError):
+    int("not a number")
+print("My error suppressed")
+
+class MyConnection:
+    def __enter__(self):
+        print("My connection opened")
+        return self
+    
+    def __exit__(self, *args):
+        print("My connection closed")
+
+with MyConnection() as my_conn:
+    print("My working with connection")
+
+# Progress: part 2/2
