@@ -55,3 +55,6 @@ def my_flatten(nested):
     return result
 
 my_nested = [1, [2, 3], [4, [5, 6]]]
+print(f"My flattened: {my_flatten(my_nested)}")
+
+# Progress: part 2/2
