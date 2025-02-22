@@ -45,5 +45,18 @@ def my_concat_strings():
     return result
 
 @my_timer
+def my_join_strings():
+    return "".join([my_string for _ in range(10000)])
 
-# Progress: part 4/6
+my_concat_strings()
+my_join_strings()
+
+my_data = [{"name": "David", "age": 30} for _ in range(100)]
+
+@my_timer
+def my_filter_dict_comp():
+    return [d for d in my_data if d["age"] > 25]
+
+@my_timer
+
+# Progress: part 5/6
