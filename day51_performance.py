@@ -16,3 +16,18 @@ def my_list_comp():
     return [x*2 for x in range(100000)]
 
 @my_timer
+def my_map_version():
+    return list(map(lambda x: x*2, range(100000)))
+
+my_list_comp()
+my_map_version()
+
+my_nums = list(range(1000))
+
+@my_timer
+def my_check_membership_list():
+    return 999 in my_nums
+
+@my_timer
+
+# Progress: part 2/6
