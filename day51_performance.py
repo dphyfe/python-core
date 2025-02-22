@@ -58,5 +58,10 @@ def my_filter_dict_comp():
     return [d for d in my_data if d["age"] > 25]
 
 @my_timer
+def my_filter_builtin():
+    return list(filter(lambda d: d["age"] > 25, my_data))
 
-# Progress: part 5/6
+my_filter_dict_comp()
+my_filter_builtin()
+
+# Progress: part 6/6
