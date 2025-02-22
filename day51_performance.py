@@ -29,5 +29,13 @@ def my_check_membership_list():
     return 999 in my_nums
 
 @my_timer
+def my_check_membership_set():
+    my_set = set(my_nums)
+    return 999 in my_set
 
-# Progress: part 2/6
+my_check_membership_list()
+my_check_membership_set()
+
+my_string = "hello "
+
+# Progress: part 3/6
