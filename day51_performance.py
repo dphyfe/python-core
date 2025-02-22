@@ -37,5 +37,13 @@ my_check_membership_list()
 my_check_membership_set()
 
 my_string = "hello "
+@my_timer
+def my_concat_strings():
+    result = ""
+    for _ in range(10000):
+        result += my_string
+    return result
 
-# Progress: part 3/6
+@my_timer
+
+# Progress: part 4/6
