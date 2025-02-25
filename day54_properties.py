@@ -42,3 +42,43 @@ class MyPerson:
 my_person = MyPerson("David", "Taylor")
 print(f"My full name: {my_person.full_name}")
 my_person.full_name = "John Smith"
+print(f"My new full name: {my_person.full_name}")
+
+class MyTemperature:
+    def __init__(self, celsius):
+        self._celsius = celsius
+    
+    @property
+    def celsius(self):
+        return self._celsius
+    
+    @property
+    def fahrenheit(self):
+        return self._celsius * 9/5 + 32
+    
+    @fahrenheit.setter
+    def fahrenheit(self, value):
+        self._celsius = (value - 32) * 5/9
+
+my_temp = MyTemperature(0)
+print(f"My celsius: {my_temp.celsius}")
+print(f"My fahrenheit: {my_temp.fahrenheit}")
+my_temp.fahrenheit = 100
+print(f"My new celsius: {my_temp.celsius}")
+
+class MyAccount:
+    def __init__(self):
+        self._balance = 0
+    
+    @property
+    def balance(self):
+        return self._balance
+    
+    def deposit(self, amount):
+        self._balance += amount
+
+my_account = MyAccount()
+my_account.deposit(100)
+print(f"My balance: {my_account.balance}")
+
+# Progress: part 2/2
