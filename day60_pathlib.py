@@ -26,5 +26,14 @@ print(f"My parts: {my_path.parts}")
 print(f"My parents: {list(my_path.parents)}")
 
 my_file = Path("test_file.txt")
+my_file.touch()
+print(f"My exists: {my_file.exists()}")
+print(f"My is_file: {my_file.is_file()}")
 
-# Progress: part 2/4
+my_dir = Path("test_dir")
+my_dir.mkdir(exist_ok=True)
+print(f"My is_dir: {my_dir.is_dir()}")
+
+my_file.write_text("My content")
+
+# Progress: part 3/4
