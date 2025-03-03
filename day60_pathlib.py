@@ -35,5 +35,21 @@ my_dir.mkdir(exist_ok=True)
 print(f"My is_dir: {my_dir.is_dir()}")
 
 my_file.write_text("My content")
+my_content = my_file.read_text()
+print(f"My read: {my_content}")
 
-# Progress: part 3/4
+for my_item in Path(".").iterdir():
+    if my_item.is_file():
+        print(f"My file: {my_item.name}")
+
+my_py_files = list(Path("python-core").glob("*.py"))
+print(f"My py files count: {len(my_py_files)}")
+
+my_all_py = list(Path(".").rglob("*.py"))
+print(f"My all py count: {len(my_all_py)}")
+
+my_file.unlink()
+my_dir.rmdir()
+print("My cleanup done")
+
+# Progress: part 4/4
