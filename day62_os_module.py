@@ -22,3 +22,29 @@ my_abs = os.path.abspath("my_test_dir")
 print(f"My absolute: {my_abs}")
 
 my_base = os.path.basename("/path/to/file.txt")
+my_dir = os.path.dirname("/path/to/file.txt")
+print(f"My basename: {my_base}")
+print(f"My dirname: {my_dir}")
+
+my_name, my_ext = os.path.splitext("document.txt")
+print(f"My name: {my_name}, ext: {my_ext}")
+
+for my_root, my_dirs, my_files in os.walk("my_test_dir"):
+    print(f"My root: {my_root}")
+    print(f"My dirs: {my_dirs}")
+    print(f"My files: {my_files}")
+
+os.rmdir("my_test_dir/sub")
+os.rmdir("my_test_dir")
+print("My cleanup done")
+
+my_env = os.environ.get("PATH")
+print(f"My PATH first 50 chars: {my_env[:50] if my_env else 'None'}")
+
+my_sep = os.sep
+print(f"My separator: {my_sep}")
+
+my_user = os.path.expanduser("~")
+print(f"My home: {my_user}")
+
+# Progress: part 2/2
