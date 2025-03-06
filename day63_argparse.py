@@ -37,5 +37,16 @@ print("My subcommands configured")
 
 my_parser6 = argparse.ArgumentParser()
 my_parser6.add_argument("--debug", action="store_true")
+my_parser6.add_argument("--log-level", default="INFO")
 
-# Progress: part 3/4
+print("My debug parser configured")
+
+my_test_args = ["David", "--age", "30", "--verbose"]
+my_namespace = my_parser.parse_args(my_test_args)
+print(f"My parsed: name={my_namespace.name}, age={my_namespace.age}, verbose={my_namespace.verbose}")
+
+my_parser7 = argparse.ArgumentParser()
+my_parser7.add_argument("--config", type=argparse.FileType("r"))
+print("My file type parser configured")
+
+# Progress: part 4/4
