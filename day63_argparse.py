@@ -28,5 +28,14 @@ print("My nargs parser configured")
 
 my_parser5 = argparse.ArgumentParser()
 my_subparsers = my_parser5.add_subparsers(dest="command")
+my_add = my_subparsers.add_parser("add", help="My add command")
+my_add.add_argument("numbers", nargs="+", type=int)
+my_remove = my_subparsers.add_parser("remove", help="My remove command")
+my_remove.add_argument("item", help="My item to remove")
 
-# Progress: part 2/4
+print("My subcommands configured")
+
+my_parser6 = argparse.ArgumentParser()
+my_parser6.add_argument("--debug", action="store_true")
+
+# Progress: part 3/4
