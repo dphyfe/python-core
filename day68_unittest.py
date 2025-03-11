@@ -56,4 +56,4 @@ if __name__ == "__main__":
     print(f"My failures: {len(my_result.failures)}")
     print(f"My errors: {len(my_result.errors)}")
 
-# Progress: part 2/3
+# Progress: part 3/3
