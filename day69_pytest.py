@@ -50,3 +50,17 @@ def test_my_fixture(my_sample_data):
     (2, 3, 5),
     (0, 0, 0),
     (-1, 1, 0),
+])
+def test_my_parametrized(a, b, expected):
+    assert my_add(a, b) == expected
+
+class TestMyClass:
+    def test_my_method1(self):
+        assert 1 + 1 == 2
+    
+    def test_my_method2(self):
+        assert "hello".upper() == "HELLO"
+
+print("My pytest examples defined - run with: pytest day69_pytest.py")
+
+# Progress: part 2/2
