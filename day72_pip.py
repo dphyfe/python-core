@@ -53,5 +53,34 @@ print(my_structure)
 
 my_setup_py = """
 # My setup.py example
+from setuptools import setup, find_packages
 
-# Progress: part 4/5
+setup(
+    name='my_package',
+    version='0.1.0',
+    packages=find_packages(),
+    install_requires=[
+        'requests>=2.28.0',
+    ],
+)
+"""
+
+print("My setup.py example:")
+print(my_setup_py)
+
+print("\nMy pip best practices:")
+print("  - Use virtual environments")
+print("  - Pin versions in requirements.txt")
+print("  - Keep requirements updated")
+print("  - Use pip freeze for exact versions")
+print("  - Separate dev and prod requirements")
+
+try:
+    import pkg_resources
+    my_installed = [(d.project_name, d.version) for d in pkg_resources.working_set]
+    print(f"\nMy installed packages count: {len(my_installed)}")
+    print(f"My first 3 packages: {my_installed[:3]}")
+except ImportError:
+    print("\nMy pkg_resources not available")
+
+# Progress: part 5/5
