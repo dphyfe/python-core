@@ -28,3 +28,7 @@ print("  pip freeze > requirements.txt")
 print("  pip install --upgrade package_name")
 
 my_example_requirements = """# My requirements.txt example
+requests==2.28.0
+flask>=2.0.0
+
+# Progress: part 2/5
