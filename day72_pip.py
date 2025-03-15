@@ -46,5 +46,12 @@ my_package/
         __init__.py
         test_module1.py
 setup.py
+README.md
+requirements.txt
+"""
+print(my_structure)
 
-# Progress: part 3/5
+my_setup_py = """
+# My setup.py example
+
+# Progress: part 4/5
