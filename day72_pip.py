@@ -30,5 +30,21 @@ print("  pip install --upgrade package_name")
 my_example_requirements = """# My requirements.txt example
 requests==2.28.0
 flask>=2.0.0
+pytest>=7.0.0
+"""
 
-# Progress: part 2/5
+print(f"\nMy requirements.txt example:")
+print(my_example_requirements)
+
+print("My package structure example:")
+my_structure = """
+my_package/
+    __init__.py
+    module1.py
+    module2.py
+    tests/
+        __init__.py
+        test_module1.py
+setup.py
+
+# Progress: part 3/5
