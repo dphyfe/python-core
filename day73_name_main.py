@@ -14,3 +14,5 @@ def my_main():
 if __name__ == "__main__":
     print("My script running directly")
     my_main()
+
+# Progress: part 2/3
