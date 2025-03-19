@@ -41,3 +41,40 @@ os.remove("my_file2.txt")
 from contextlib import contextmanager
 
 @contextmanager
+def my_context(name):
+    print(f"My {name} setup")
+    try:
+        yield name
+    finally:
+        print(f"My {name} cleanup")
+
+with my_context("operation") as my_op:
+    print(f"My executing {my_op}")
+
+from contextlib import suppress
+
+with suppress(FileNotFoundError):
+    os.remove("nonexistent.txt")
+print("My error suppressed")
+
+import time
+
+class MyTimer:
+    def __enter__(self):
+        self.start = time.time()
+        return self
+    
+    def __exit__(self, *args):
+        self.end = time.time()
+        print(f"My elapsed: {self.end - self.start:.4f}s")
+
+with MyTimer():
+    sum(range(1000000))
+
+print("\nMy with statement benefits:")
+print("  - Automatic resource cleanup")
+print("  - Exception safety")
+print("  - Cleaner code")
+print("  - No need for try/finally")
+
+# Progress: part 2/2
